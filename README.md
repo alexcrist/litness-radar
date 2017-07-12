@@ -4,7 +4,7 @@ Party group BAC tracker.
 
 ## To Run
 
-`python3 src/server.py`
+Run `python3 src/server.py`
 
 ## MVP Features
 
