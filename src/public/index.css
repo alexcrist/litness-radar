@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  background-image: url("https://kqduane.files.wordpress.com/2015/03/college-party.jpg?w=640");
+  background-size: cover;
+  opacity: 0.2;
+  filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 55px;
+  margin: 0;
+  padding: 20px;
+}
+
+.input-container {
+  padding: 20px 0;
+}
+
+.input {
+  margin: 0 1%;
+  font-family: 'Inconsolata', monospace;
+  width: 31%;
+  height: 45px;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  font-size: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.input:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.input-join {
+  background: #43A047;
+}
+
+.input-drink {
+  background: #0D47A1;
+}
+
+.input-leave {
+  background: #EF5350;
+}
+
+.current-bac {
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+.bac-value {
+}
