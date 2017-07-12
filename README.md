@@ -2,6 +2,10 @@
 
 Party group BAC tracker.
 
+## To Run
+
+`python3 src/server.py`
+
 ## MVP Features
 
 * Central HUB
@@ -14,7 +18,7 @@ Party group BAC tracker.
 * Webpage to host ongoing litness
   * Have people check-in when they drink something
   * Display time graph of group/individual BAC levels
-  * Display average BAC to high precision and have it tick down constantly/jump up when 
+  * Display average BAC to high precision and have it tick down constantly/jump up when
 
 ## Feature Wishlist
 
