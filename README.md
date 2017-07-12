@@ -21,3 +21,8 @@ Party group BAC tracker.
 * Song litness integration
   * Ranking of song litness
   * Live party song litness calibration
+* Persistent phone database
+* App for checking in by users
+  * Unique user logins
+  * Hostable party rooms that people can check into
+  * User stats over time
