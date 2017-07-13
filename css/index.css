@@ -29,6 +29,7 @@ body {
 }
 
 .person {
+  overflow: hidden;
   display: inline-block;
   width: 31%;
   margin: 1%;
