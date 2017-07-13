@@ -36,13 +36,13 @@ function initButtons(person, id) {
     var date = new Date();
     person.drinks++;
     person.drinkTimes.push(date.getTime());
-    explode(e.pageX, e.pageY, 5 * person.drinks);
+    explode(e.pageX, e.pageY, person.drinks);
   });
 
   $('#person-leave-' + id).click(function (e) {
     person.atParty = false;
     $('#person-' + id).remove();
-    explode(e.pageX, e.pageY, 5 * person.drinks);
+    explode(e.pageX, e.pageY, person.drinks);
   });
 }
 
