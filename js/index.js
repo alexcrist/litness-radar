@@ -21,21 +21,28 @@ $('.join').click(function () {
   };
   people.push(person);
 
-  var html = '<div id="person-' + id + '" class="person"><div class="person-name">' + name + '</div><button id="person-drink-' + id + '" class="person-drink">DRINK</button><button id="person-leave-' + id + '" class="person-leave">✖</button></div>';
+  var html = '<div id="person-' + id + '" class="person">\
+                <div class="person-name">' + name + '</div>\
+                <button id="person-drink-' + id + '" class="person-drink">DRINK</button>\
+                <button id="person-leave-' + id + '" class="person-leave">✖</button>\
+              </div>';
+
   $('.input-container').append(html);
   initButtons(person, id);
 });
 
 function initButtons(person, id) {
-  $('#person-drink-' + id).click(function () {
+  $('#person-drink-' + id).click(function (e) {
     var date = new Date();
     person.drinks++;
     person.drinkTimes.push(date.getTime());
+    explode(e.pageX, e.pageY, 5 * person.drinks);
   });
 
-  $('#person-leave-' + id).click(function () {
+  $('#person-leave-' + id).click(function (e) {
     person.atParty = false;
     $('#person-' + id).remove();
+    explode(e.pageX, e.pageY, 5 * person.drinks);
   });
 }
 
@@ -71,6 +78,44 @@ function decrementBAC(BAC, t1, t2) {
 
 function incrementBAC(BAC) {
   return BAC + singleDrinkBAC;
+}
+
+function explode(startX, startY, particleCount) {
+  var arr = [];
+  var angle = 0;
+  var particles = [];
+
+  for (var i = 0; i < particleCount; i++) {
+    var rad = (Math.PI / 180) * angle;
+
+    var x = Math.cos(rad) * (100 + Math.random() * 40);
+    var y = Math.sin(rad) * (100 + Math.random() * 40);
+
+    arr.push([ startX + x, startY + y ]);
+
+    var z = $('<div class="debris"></div>');
+
+    z.css({
+      top: startY - 14,
+      left: startX - 14
+    }).appendTo($('body'));
+
+    particles.push(z);
+    angle += 360 / particleCount;
+  }
+
+  $.each(particles, function (i, v) {
+    $(v).show();
+    $(v).animate({
+      top: arr[i][1],
+      left: arr[i][0],
+      width: 4,
+      height: 4,
+      opacity: 0
+    }, 2000, function () {
+      $(v).remove()
+    });
+  })
 }
 
 setInterval(function () {

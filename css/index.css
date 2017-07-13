@@ -109,3 +109,17 @@ body {
   text-align: center;
   font-family: 'Inconsolata', monospace;
 }
+
+.debris {
+  background-image: url('/assets/beer-outline-filled.png');
+  background-size: contain;
+  background-repeat: none;
+  background-position: center;
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 1.0;
+  overflow: hidden;
+  border-radius: 8px;
+}
