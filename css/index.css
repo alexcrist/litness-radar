@@ -111,7 +111,7 @@ body {
 }
 
 .debris {
-  background-image: url('/assets/beer-outline-filled.png');
+  background-image: url('../assets/beer-outline-filled.png');
   background-size: contain;
   background-repeat: none;
   background-position: center;
